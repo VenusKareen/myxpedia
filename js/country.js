@@ -1,14 +1,14 @@
 $(document).ready(function(){
     const countrymodal=$("#countrydetailsmodal"),
         addnewcountrybutton=$("#addnewcountry"),
-        countyidfield=$("#countryid"),
+        countryidfield=$("#countryid"),
         countrynamefield=$("#countryname"),
         savecountrybutton=$("#savecountry"),
         notifications=$("#notifications"),
         countiestable=$("#countriestable"),
         countrynotfications=$("#countrynotifications")
     // Load existing countries
-    getcountiesastable()
+    getcountriesastable()
 
     addnewcountrybutton.on("click",function(){
         countrymodal.modal("show")
@@ -36,7 +36,7 @@ $(document).ready(function(){
                             countrynamefield.val("")
                             countrynamefield.focus()
                             // Refresh sountries list
-                            getcountiesastable()
+                            getcountriesastable()
                         }else if(data.status=="exists"){
                             notifications.html("<div class='alert alert-info'>Country already exists in the system</div>")
                             countrynamefield.focus()
@@ -61,7 +61,7 @@ $(document).ready(function(){
         }
     }
 
-    function getcountiesastable(){
+    function getcountriesastable(){
         $.getJSON(
             "controllers/countryoperations.php",
             {
@@ -78,7 +78,7 @@ $(document).ready(function(){
                    results+=`<td><a href='#'><i class='fas fa-edit fa-lg'></i></a></td></tr>` 
             })
             // done with looping through the data that is returned
-            countiestable.find("tbody").html(results)
+            countriestable.find("tbody").html(results)
         }).fail(function(response, status, error){
             countrynotfications.html(`<div class='alert alert-danger'>${response.responseText}</div>`)
             // console.log(`Sorry an error occured ${response.responseText}`)
