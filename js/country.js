@@ -35,7 +35,7 @@ $(document).ready(function(){
                             notifications.html("<div class='alert alert-success'>Country has been saved successfully</div>")
                             countrynamefield.val("")
                             countrynamefield.focus()
-                            // Refresh sountries list
+                            // Refresh countries list
                             getcountriesastable()
                         }else if(data.status=="exists"){
                             notifications.html("<div class='alert alert-info'>Country already exists in the system</div>")
