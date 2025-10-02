@@ -5,7 +5,7 @@ $(document).ready(function(){
         countrynamefield=$("#countryname"),
         savecountrybutton=$("#savecountry"),
         notifications=$("#notifications"),
-        countiestable=$("#countriestable"),
+        countriestable=$("#countriestable"),
         countrynotfications=$("#countrynotifications")
     // Load existing countries
     getcountriesastable()
