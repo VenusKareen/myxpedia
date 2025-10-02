@@ -1,7 +1,7 @@
 $(document).ready(function(){
     const addnewbutton=$("#addnewcity"),
         citydetailsmodal=$("#citydetailsmodal"),
-        filtercountylist=$("#filtercountry"),
+        filtercounrtylist=$("#filtercountry"),
         citycountrylist=$("#citydetailscountry"),
         filtercitynotifications=$("#filtercitynotifications"),
         citynamefield=$("#citydetailscityname"),
@@ -14,7 +14,7 @@ $(document).ready(function(){
         selectfield=$("select")
 
     // load counties from the database
-    getcountries(filtercountylist,'all')
+    getcountries(filtercounrtylist,'all')
     getcountries(citycountrylist)
 
     inputfield.on("input",function(){
